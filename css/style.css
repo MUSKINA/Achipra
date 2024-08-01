@@ -255,8 +255,8 @@ h4, h5, h6, .h4, .h5, .h6 {
     border-bottom-style: dashed !important;
 }
 .menu-img{
-    width:150px;
-    height: auto;
+    /* width:150px; */
+    /* height: auto; */
 }
 /*** Menu End ***/
 
