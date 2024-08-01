@@ -411,6 +411,12 @@ h4, h5, h6, .h4, .h5, .h6 {
 
 
 /*** Team Start ***/
+.text-primary-ct{
+    color: #2f1987;
+}
+.bg-dark-ct{
+    background-color: #198754;
+}
 .team-item {
     width: 100%;
     height: 100%;
