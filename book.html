@@ -135,61 +135,118 @@
                             <input type="text" class="form-control border-primary p-2" placeholder="Specify Other Package">
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <input type="number" class="form-control border-primary p-2" placeholder="Number of Persons">
+                            <input type="text" class="form-control border-primary p-2" placeholder="Number of Persons">
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <input type="date" class="form-control border-primary p-2" placeholder="Select Date">
                         </div>
                         <div class="col-lg-4 col-md-6">
+                            <input type="text" class="form-control border-primary p-2" placeholder="Contact Number">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <label class="form-label fw-bold">Menu Items</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Drinks" id="drinks">
+                                <input class="form-check-input border-primary p-2" type="checkbox" value="Drinks" id="drinks">
                                 <label class="form-check-label" for="drinks">
                                     Drinks
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Breakfast" id="breakfast">
+                                <input class="form-check-input border-primary p-2" type="checkbox" value="Breakfast" id="breakfast">
                                 <label class="form-check-label" for="breakfast">
                                     Breakfast
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Main Course" id="main-course" onchange="toggleMainCourseOptions()">
+                                <input class="form-check-input border-primary p-2" type="checkbox" value="Main Course" id="main-course" onchange="toggleMainCourseOptions()">
                                 <label class="form-check-label" for="main-course">
                                     Main Course
                                 </label>
                             </div>
-                            <div id="main-course-options" style="display: none;">
+                            <div id="main-course-options" style="display: none; margin-left: 20px;">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Special Sadhya" id="special-sadhya">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Special Sadhya" id="special-sadhya">
                                     <label class="form-check-label" for="special-sadhya">
                                         Special Sadhya
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Traditional Sadhya" id="traditional-sadhya">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Traditional Sadhya" id="traditional-sadhya">
                                     <label class="form-check-label" for="traditional-sadhya">
                                         Traditional Sadhya
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Premium Sadhya" id="premium-sadhya">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Premium Sadhya" id="premium-sadhya">
                                     <label class="form-check-label" for="premium-sadhya">
                                         Premium Sadhya
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Veg Biriyani" id="veg-biriyani">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Veg Biriyani" id="veg-biriyani">
                                     <label class="form-check-label" for="veg-biriyani">
                                         Veg Biriyani
                                     </label>
                                 </div>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="Payasam" id="payasam">
+                                <input class="form-check-input border-primary p-2" type="checkbox" value="Payasam" id="payasam" onchange="togglePayasamOptions()">
                                 <label class="form-check-label" for="payasam">
                                     Payasam
                                 </label>
+                            </div>
+                            <div id="payasam-options" style="display: none; margin-left: 20px;">
+                                <div class="form-check">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Palada Payasam" id="palada-payasam">
+                                    <label class="form-check-label" for="palada-payasam">
+                                        Palada Payasam
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Pazham Payasam" id="pazham-payasam">
+                                    <label class="form-check-label" for="pazham-payasam">
+                                        Pazham Payasam
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Pazham Payasam" id="pazham-payasam">
+                                    <label class="form-check-label" for="pazham-payasam">
+                                        Semiya Payasam
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Parippu Payasam" id="parippu-payasam">
+                                    <label class="form-check-label" for="parippu-payasam">
+                                        Parippu Payasam
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Parippu Payasam" id="parippu-payasam">
+                                    <label class="form-check-label" for="parippu-payasam">
+                                        Ada Pradhaman
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Parippu Payasam" id="parippu-payasam">
+                                    <label class="form-check-label" for="parippu-payasam">
+                                        Gothambu Payasam
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Parippu Payasam" id="parippu-payasam">
+                                    <label class="form-check-label" for="parippu-payasam">
+                                        Pineapple Payasam
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border-primary p-2" type="checkbox" value="Parippu Payasam" id="parippu-payasam">
+                                    <label class="form-check-label" for="parippu-payasam">
+                                        Kadalaparippu Payasam
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 text-center">
@@ -222,6 +279,16 @@ function toggleMainCourseOptions() {
         mainCourseOptions.style.display = 'block';
     } else {
         mainCourseOptions.style.display = 'none';
+    }
+}
+
+function togglePayasamOptions() {
+    var payasamCheckbox = document.getElementById('payasam');
+    var payasamOptions = document.getElementById('payasam-options');
+    if (payasamCheckbox.checked) {
+        payasamOptions.style.display = 'block';
+    } else {
+        payasamOptions.style.display = 'none';
     }
 }
 </script>
