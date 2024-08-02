@@ -33,13 +33,13 @@ h4, h5, h6, .h4, .h5, .h6 {
 }
 
 .my-6 {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .py-6 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .wow,
@@ -499,3 +499,4 @@ h4, h5, h6, .h4, .h5, .h6 {
 .hero-img-sec{
     width:800px;
 } */
+ 

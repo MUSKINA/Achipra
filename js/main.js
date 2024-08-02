@@ -107,32 +107,51 @@
         }
     });
 
-})(jQuery);
-document.getElementById('package').addEventListener('change', function() {
-    var otherPackageInput = document.getElementById('other-package');
-    if (this.value === 'Other') {
-        otherPackageInput.style.display = 'block';
-    } else {
-        otherPackageInput.style.display = 'none';
-    }
-});
-
-function toggleMainCourseOptions() {
-    var mainCourseCheckbox = document.getElementById('main-course');
+})(jQuery);function toggleMainCourseOptions() {
     var mainCourseOptions = document.getElementById('main-course-options');
-    if (mainCourseCheckbox.checked) {
-        mainCourseOptions.style.display = 'block';
-    } else {
-        mainCourseOptions.style.display = 'none';
-    }
+    mainCourseOptions.style.display = mainCourseOptions.style.display === 'none' ? 'block' : 'none';
 }
 
 function togglePayasamOptions() {
-    var payasamCheckbox = document.getElementById('payasam');
     var payasamOptions = document.getElementById('payasam-options');
-    if (payasamCheckbox.checked) {
-        payasamOptions.style.display = 'block';
-    } else {
-        payasamOptions.style.display = 'none';
-    }
+    payasamOptions.style.display = payasamOptions.style.display === 'none' ? 'block' : 'none';
 }
+
+function submitData() {
+    var name = document.querySelector('[placeholder="Your Name"]').value;
+    var place = document.querySelector('[placeholder="Your Place"]').value;
+    var package = document.getElementById('package').value;
+    var otherPackage = document.querySelector('[placeholder="Specify Other Package"]').value;
+    var persons = document.querySelector('[placeholder="Number of Persons"]').value;
+    var date = document.querySelector('[placeholder="Select Date"]').value;
+    var contact = document.querySelector('[placeholder="Contact Number"]').value;
+    var email = document.querySelector('[placeholder="Enter Your Email"]').value;
+
+    var menuItems = [];
+    if (document.getElementById('drinks').checked) menuItems.push('Drinks');
+    if (document.getElementById('breakfast').checked) menuItems.push('Breakfast');
+    if (document.getElementById('main-course').checked) {
+        if (document.getElementById('special-sadhya').checked) menuItems.push('Special Sadhya');
+        if (document.getElementById('traditional-sadhya').checked) menuItems.push('Traditional Sadhya');
+        if (document.getElementById('premium-sadhya').checked) menuItems.push('Premium Sadhya');
+        if (document.getElementById('veg-biriyani').checked) menuItems.push('Veg Biriyani');
+    }
+    if (document.getElementById('payasam').checked) {
+        if (document.getElementById('palada-payasam').checked) menuItems.push('Palada Payasam');
+        if (document.getElementById('pazham-payasam').checked) menuItems.push('Pazham Payasam');
+        if (document.getElementById('semiya-payasam').checked) menuItems.push('Semiya Payasam');
+        if (document.getElementById('parippu-payasam').checked) menuItems.push('Parippu Payasam');
+        if (document.getElementById('adapradhman-payasam').checked) menuItems.push('Ada Pradhaman');
+        if (document.getElementById('gothambu-payasam').checked) menuItems.push('Gothambu Payasam');
+        if (document.getElementById('pineapple-payasam').checked) menuItems.push('Pineapple Payasam');
+        if (document.getElementById('kadalaparipp-payasam').checked) menuItems.push('Kadalaparippu Payasam');
+    }
+
+    var menuItemsStr = menuItems.join(', ');
+
+    var message = `Name: ${name}\nPlace: ${place}\nPackage: ${package}\nOther Package: ${otherPackage}\nNumber of Persons: ${persons}\nDate: ${date}\nContact: ${contact}\nEmail: ${email}\nMenu Items: ${menuItemsStr}`;
+    var whatsappURL = `https://api.whatsapp.com/send?phone=+919946687915&text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, '_blank');
+}
+
