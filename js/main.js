@@ -108,3 +108,31 @@
     });
 
 })(jQuery);
+document.getElementById('package').addEventListener('change', function() {
+    var otherPackageInput = document.getElementById('other-package');
+    if (this.value === 'Other') {
+        otherPackageInput.style.display = 'block';
+    } else {
+        otherPackageInput.style.display = 'none';
+    }
+});
+
+function toggleMainCourseOptions() {
+    var mainCourseCheckbox = document.getElementById('main-course');
+    var mainCourseOptions = document.getElementById('main-course-options');
+    if (mainCourseCheckbox.checked) {
+        mainCourseOptions.style.display = 'block';
+    } else {
+        mainCourseOptions.style.display = 'none';
+    }
+}
+
+function togglePayasamOptions() {
+    var payasamCheckbox = document.getElementById('payasam');
+    var payasamOptions = document.getElementById('payasam-options');
+    if (payasamCheckbox.checked) {
+        payasamOptions.style.display = 'block';
+    } else {
+        payasamOptions.style.display = 'none';
+    }
+}
