@@ -37,7 +37,6 @@
         </div>
         <!-- Spinner End -->
 
-
         <!-- Navbar start -->
         <div class="container-fluid nav-bar">
             <div class="container">
@@ -98,103 +97,135 @@
 
         <!-- Hero Start -->
         <div class="container-fluid bg-light py-6 my-6 mt-0">
-            <div class="container text-center animated bounceInDown">
+            <div class="container text-center animated bounceInDown ">
                 <h1 class="display-1 mb-4">Booking</h1>
-                <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-dark" aria-current="page">Booking</li>
-                </ol>
+                
             </div>
         </div>
         <!-- Hero End -->
-
-
-        <!-- Book Us Start -->
-        <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-1">
-                        <img src="img/background-site.jpg" class="img-fluid h-100 w-100 rounded-start" style="object-fit: cover; opacity: 0.7;" alt="">
+<!-- Book Us Start -->
+<div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-1">
+                <img src="img/background-site.jpg" class="img-fluid h-100 w-100 rounded-start" style="object-fit: cover; opacity: 0.7;" alt="">
+            </div>
+            <div class="col-10">
+                <div class="border-bottom border-top border-primary bg-light py-5 px-4">
+                    <div class="text-center">
+                        <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Book Us</small>
+                        <h1 class="display-5 mb-5">Where you want Our Services</h1>
                     </div>
-                    <div class="col-10">
-                        <div class="border-bottom border-top border-primary bg-light py-5 px-4">
-                            <div class="text-center">
-                                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Book Us</small>
-                                <h1 class="display-5 mb-5">Where you want Our Services</h1>
+                    <div class="row g-4 form">
+                        <div class="col-lg-4 col-md-6">
+                            <input type="text" class="form-control border-primary p-2" placeholder="Your Name">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="text" class="form-control border-primary p-2" placeholder="Your Place">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <select id="package" class="form-select border-primary p-2" aria-label="Default select example">
+                                <option selected>Choose Your Package</option>
+                                <option value="Birthday Party">Birthday Party</option>
+                                <option value="Wedding">Wedding</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4 col-md-6" id="other-package" style="display: none;">
+                            <input type="text" class="form-control border-primary p-2" placeholder="Specify Other Package">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="number" class="form-control border-primary p-2" placeholder="Number of Persons">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="date" class="form-control border-primary p-2" placeholder="Select Date">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Drinks" id="drinks">
+                                <label class="form-check-label" for="drinks">
+                                    Drinks
+                                </label>
                             </div>
-                            <div class="row g-4 form">
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select Country</option>
-                                        <option value="1">USA</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Breakfast" id="breakfast">
+                                <label class="form-check-label" for="breakfast">
+                                    Breakfast
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Main Course" id="main-course" onchange="toggleMainCourseOptions()">
+                                <label class="form-check-label" for="main-course">
+                                    Main Course
+                                </label>
+                            </div>
+                            <div id="main-course-options" style="display: none;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Special Sadhya" id="special-sadhya">
+                                    <label class="form-check-label" for="special-sadhya">
+                                        Special Sadhya
+                                    </label>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select City</option>
-                                        <option value="1">Depend On Country</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Traditional Sadhya" id="traditional-sadhya">
+                                    <label class="form-check-label" for="traditional-sadhya">
+                                        Traditional Sadhya
+                                    </label>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select Palace</option>
-                                        <option value="1">Depend On Country</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Premium Sadhya" id="premium-sadhya">
+                                    <label class="form-check-label" for="premium-sadhya">
+                                        Premium Sadhya
+                                    </label>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Small Event</option>
-                                        <option value="1">Event Type</option>
-                                        <option value="2">Big Event</option>
-                                        <option value="3">Small Event</option>
-                                    </select>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Veg Biriyani" id="veg-biriyani">
+                                    <label class="form-check-label" for="veg-biriyani">
+                                        Veg Biriyani
+                                    </label>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>No. Of Palace</option>
-                                        <option value="1">100-200</option>
-                                        <option value="2">300-400</option>
-                                        <option value="3">500-600</option>
-                                        <option value="4">700-800</option>
-                                        <option value="5">900-1000</option>
-                                        <option value="6">1000+</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Vegetarian</option>
-                                        <option value="1">Vegetarian</option>
-                                        <option value="2">Non Vegetarian</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="mobile" class="form-control border-primary p-2" placeholder="Your Contact No.">
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="date" class="form-control border-primary p-2" placeholder="Select Date">
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
-                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Payasam" id="payasam">
+                                <label class="form-check-label" for="payasam">
+                                    Payasam
+                                </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-1">
-                        <img src="img/background-site.jpg" class="img-fluid h-100 w-100 rounded-end" style="object-fit: cover; opacity: 0.7;" alt="">
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-1">
+                <img src="img/background-site.jpg" class="img-fluid h-100 w-100 rounded-end" style="object-fit: cover; opacity: 0.7;" alt="">
+            </div>
         </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('package').addEventListener('change', function() {
+    var otherPackageInput = document.getElementById('other-package');
+    if (this.value === 'Other') {
+        otherPackageInput.style.display = 'block';
+    } else {
+        otherPackageInput.style.display = 'none';
+    }
+});
+
+function toggleMainCourseOptions() {
+    var mainCourseCheckbox = document.getElementById('main-course');
+    var mainCourseOptions = document.getElementById('main-course-options');
+    if (mainCourseCheckbox.checked) {
+        mainCourseOptions.style.display = 'block';
+    } else {
+        mainCourseOptions.style.display = 'none';
+    }
+}
+</script>
+
         <!-- Book Us End -->
 
 
