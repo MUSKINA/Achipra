@@ -152,6 +152,8 @@ function submitData() {
     var message = `Name: ${name}\nPlace: ${place}\nPackage: ${package}\nOther Package: ${otherPackage}\nNumber of Persons: ${persons}\nDate: ${date}\nContact: ${contact}\nEmail: ${email}\nMenu Items: ${menuItemsStr}`;
     var whatsappURL = `https://api.whatsapp.com/send?phone=+919946687915&text=${encodeURIComponent(message)}`;
 
-    window.open(whatsappURL, '_blank');
+    alert("Your details have been submitted successfully!");
+
+    window.location.href = whatsappURL;
 }
 
