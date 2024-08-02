@@ -98,8 +98,9 @@ h4, h5, h6, .h4, .h5, .h6 {
 
 /*** Navbar Start ***/
 .new-hero-class {
-    width:100%;
+    width:530px;
     height:auto;
+    
 }
 .nav-bar {
     background: var(--bs-light);
@@ -131,12 +132,7 @@ h4, h5, h6, .h4, .h5, .h6 {
     height:50px;
 
 }
-.new-class-booknow{
-    background-image: url(/img/booking-hero.jpg);
-    height:540px;
-    background-repeat: no-repeat;
-width:500px;
-}
+
 @media (min-width: 1200px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -499,4 +495,7 @@ width:500px;
 }
 /*** Footer End ***/
 
-
+/* 
+.hero-img-sec{
+    width:800px;
+} */
