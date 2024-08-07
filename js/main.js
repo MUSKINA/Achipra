@@ -9,7 +9,7 @@
             }
         }, 1000);  // Adjust the delay time as needed (1000 ms = 1 second)
     };
-    spinner();
+    spinner(); 
     
     
     // Initiate the wowjs
