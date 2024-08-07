@@ -7,10 +7,9 @@
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
             }
-        }, 1000);  // Adjust the delay time as needed (1000 ms = 1 second)
+        }, 0);  // No delay (0 ms)
     };
-    spinner(); 
-    
+    spinner();
     
     // Initiate the wowjs
     new WOW().init();
