@@ -564,6 +564,27 @@
       max-width: 960px;
     }
   }
+  @media (max-width: 768px) {
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+    .description {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+@media (max-width: 1140px) {
+  .img-fluid {
+      max-width: 100%;
+      height: auto;
+  }
+  .description {
+      font-size: 1rem;
+      padding: 10px;
+  }
+}
+
   @media (min-width: 1200px) {
     .container-xl,
     .container-lg,
