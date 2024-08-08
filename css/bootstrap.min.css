@@ -4510,7 +4510,7 @@ fieldset:disabled .btn {
   color: #020304;
 }
 @keyframes progress-bar-stripes {
-  0 {
+  0{
     background-position-x: 1rem;
   }
 }
