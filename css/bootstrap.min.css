@@ -3,9 +3,10 @@
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */:root {
-  --bs-blue: #198754;
-  --bs-indigo: #198754;
+ */
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #07da63;
@@ -509,7 +510,6 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 .img-thumbnail {
   padding: 0.25rem;
@@ -564,27 +564,6 @@ progress {
     max-width: 960px;
   }
 }
-@media (max-width: 768px) {
-  .img-fluid {
-      max-width: 100%;
-      height: auto;
-  }
-  .description {
-      font-size: 1rem;
-      padding: 10px;
-  }
-}
-@media (max-width: 1140px) {
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-.description {
-    font-size: 1rem;
-    padding: 10px;
-}
-}
-
 @media (min-width: 1200px) {
   .container-xl,
   .container-lg,
@@ -1783,19 +1762,6 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .menu-item {
-    flex-direction: column;
-    /* align-items: flex-start; */
-  }
-
-  .menu-item img {
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 25%; 
-  }
-
-  
-
 }
 @media (max-width: 767.98px) {
   .table-responsive-md {
@@ -4510,7 +4476,7 @@ fieldset:disabled .btn {
   color: #020304;
 }
 @keyframes progress-bar-stripes {
-  0 {
+  0% {
     background-position-x: 1rem;
   }
 }
@@ -5686,7 +5652,7 @@ fieldset:disabled .btn {
   border-width: 0.2em;
 }
 @keyframes spinner-grow {
-  0 {
+  0% {
     transform: scale(0);
   }
   50% {
