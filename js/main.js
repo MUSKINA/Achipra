@@ -52,7 +52,16 @@
         delay: 10,
         time: 2000
     });
-
+    document.getElementById('package').addEventListener('change', function () {
+        var selectedPackage = this.value;
+        var otherPackageInput = document.getElementById('other-package');
+    
+        if (selectedPackage === 'Other') {
+            otherPackageInput.style.display = 'block';
+        } else {
+            otherPackageInput.style.display = 'none';
+        }
+    });
 
     // Testimonial carousel
     $(".testimonial-carousel-1").owlCarousel({
