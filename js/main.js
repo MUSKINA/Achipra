@@ -171,10 +171,24 @@ function submitData() {
     }
 
     // Validate phone number length
-    if (contact.length < 10) {
+    if (contact.length < 10 || contact.length>10) {
         alert("Please enter a valid contact number.");
         return false;
     }
+    // Validate name format (only alphabetic characters and spaces)
+  var namePattern = /^[A-Za-z\s]+$/;
+  if (!namePattern.test(name)) {
+    alert("Please enter a valid name (letters and spaces only).");
+    return false;
+  }
+
+  // Validate place format (no numbers allowed)
+  var placePattern = /^[A-Za-z\s]+$/;
+  if (!placePattern.test(place)) {
+    alert("Please enter a valid place (letters and spaces only).");
+    return false;
+  }
+
 
 
     var menuItemsStr = menuItems.join(', ');
