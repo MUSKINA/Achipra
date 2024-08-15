@@ -10,21 +10,21 @@
         }, 0);  // No delay (0 ms)
     };
     spinner();
-    
+
     // Initiate the wowjs
     new WOW().init();
-    
-    
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
+
+
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
 
@@ -55,12 +55,12 @@
     document.getElementById('package').addEventListener('change', function () {
         var selectedPackage = this.value;
         var otherPackageInput = document.getElementById('other-package');
-    
+
         if (selectedPackage === 'Other') {
             otherPackageInput.style.display = 'block';
         } else {
             otherPackageInput.style.display = 'none';
-        }
+        }
     });
 
     // Testimonial carousel
@@ -74,17 +74,17 @@
         autoplaySpeed: 10000,
         autoplayHoverPause: false,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            575:{
-                items:1
+            575: {
+                items: 1
             },
-            767:{
-                items:2
+            767: {
+                items: 2
             },
-            991:{
-                items:3
+            991: {
+                items: 3
             }
         }
     });
@@ -100,22 +100,22 @@
         autoplaySpeed: 10000,
         autoplayHoverPause: false,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            575:{
-                items:1
+            575: {
+                items: 1
             },
-            767:{
-                items:2
+            767: {
+                items: 2
             },
-            991:{
-                items:3
+            991: {
+                items: 3
             }
         }
     });
 
-})(jQuery);function toggleMainCourseOptions() {
+})(jQuery); function toggleMainCourseOptions() {
     var mainCourseOptions = document.getElementById('main-course-options');
     mainCourseOptions.style.display = mainCourseOptions.style.display === 'none' ? 'block' : 'none';
 }
