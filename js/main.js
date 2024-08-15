@@ -126,14 +126,14 @@ function togglePayasamOptions() {
 }
 
 function submitData() {
-    var name = document.querySelector('[placeholder="Your Name"]').value;
-    var place = document.querySelector('[placeholder="Your Place"]').value;
+    var name = document.querySelector('[placeholder="Your Name"]').value.trim();
+    var place = document.querySelector('[placeholder="Your Place"]').value.trim();
     var package = document.getElementById('package').value;
-    var otherPackage = document.querySelector('[placeholder="Specify Other Package"]').value;
-    var persons = document.querySelector('[placeholder="Number of Persons"]').value;
-    var date = document.querySelector('[placeholder="Select Date"]').value;
-    var contact = document.querySelector('[placeholder="Contact Number"]').value;
-    var email = document.querySelector('[placeholder="Enter Your Email"]').value;
+    var otherPackage = document.querySelector('[placeholder="Specify Other Package"]').value.trim();
+    var persons = document.querySelector('[placeholder="Number of Persons"]').value.trim();
+    var date = document.querySelector('[placeholder="Select Date"]').value.trim();
+    var contact = document.querySelector('[placeholder="Contact Number"]').value.trim();
+    var email = document.querySelector('[placeholder="Enter Your Email"]').value.trim();
 
     var menuItems = [];
     if (document.getElementById('drinks').checked) menuItems.push('Drinks');
@@ -154,6 +154,28 @@ function submitData() {
         if (document.getElementById('pineapple-payasam').checked) menuItems.push('Pineapple Payasam');
         if (document.getElementById('kadalaparipp-payasam').checked) menuItems.push('Kadalaparippu Payasam');
     }
+
+    var menuItemsStr = menuItems.join(', ');
+
+    // Basic validation
+    if (name === "" || place === "" || persons === "" || date === "" || contact === "" || email === "") {
+        alert("Please fill out all required fields.");
+        return false;
+    }
+
+    // Validate email format
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    // Validate phone number length
+    if (contact.length < 10) {
+        alert("Please enter a valid contact number.");
+        return false;
+    }
+
 
     var menuItemsStr = menuItems.join(', ');
 
