@@ -503,4 +503,67 @@ h4, h5, h6, .h4, .h5, .h6 {
 .hero-img-sec{
     width:800px;
 } */
- 
+ /* other pages hero */
+ .hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    animation: changeBackground 20s infinite;
+}
+.hero-content h1{
+    color: #FFFFFF;
+}
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@keyframes changeBackground {
+    0% {
+        background-image: url('../img/heroaj1.jpeg');
+    }
+    20% {
+        background-image: url('../img/heroaj2.jpeg');
+    }
+    40% {
+        background-image: url('../img/heroaj3.jpeg');
+    }
+    60% {
+        background-image: url('../img/heroaj4.jpeg');
+    }
+    80% {
+        background-image: url('../img/heroaj5.jpeg'); 
+    }
+    100% {
+        background-image: url('../img/heroaj6.jpeg'); 
+    }
+}

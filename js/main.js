@@ -200,4 +200,61 @@ function submitData() {
 
     window.location.href = whatsappURL;
 }
+// contact us
+function submitForm() {
+    // Get form values
+    let name = document.getElementById('name').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let message = document.getElementById('message').value.trim();
+    let errorMessage = '';
 
+    // Basic validation
+    if (!name) {
+        errorMessage += 'Name is required.\n';
+    }
+    if (!email) {
+        errorMessage += 'Email is required.\n';
+    } else if (!validateEmail(email)) {
+        errorMessage += 'Email is not valid.\n';
+    }
+    if (!message) {
+        errorMessage += 'Message is required.\n';
+    }
+
+    // Show error if any, or proceed
+    if (errorMessage) {
+        alert(errorMessage);
+        return;  // Stop further execution if there's an error
+    }
+
+    // Create JSON object
+    let formData = {
+        name: name,
+        email: email,
+        message: message
+    };
+
+    // Send JSON data to the server using fetch
+    fetch('save_contact.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)  // Convert JavaScript object to JSON
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);  // Show the response from the PHP script
+        document.getElementById('contactForm').reset();  // Reset the form
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to send the message. Please try again.');
+    });
+}
+
+// Email validation function
+function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(email);
+}
